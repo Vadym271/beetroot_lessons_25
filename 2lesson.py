@@ -1,1 +1,15 @@
-print("hello world")
+#first method
+print(9*"#")
+print("#\t\t#")
+print("#\t\t#")
+print("#\t\t#")
+print(9*"#", end="\n")
+print()
+print("#\t\t#")
+print("#\t\t#")
+print(9*"#", end="\n")
+print("#\t\t#")
+print("#\t\t#")
+print()
+#second method
+print(9*"#", "\n#\t\t#\n#\t\t#\n#\t\t#", "\n", 9*"#", "\n", "\n#\t\t#\n#\t\t#\n", 9*"#", "\n#\t\t#\n#\t\t#\n", sep="")
