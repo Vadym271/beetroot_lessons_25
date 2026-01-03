@@ -12,9 +12,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     with conn:
         print(f"Connected by {addr}")
         while True:
-            data, shift = conn.recv(1024)
+            data = conn.recv(1024)
             obj = tuple(json.loads(data.decode()))
             if not data:
                 break
-
-            conn.sendall(ceasar_cypher(obj[0], obj[1]))
+            conn.sendall(ceasar_cypher(obj[0], obj[1]).encode())
