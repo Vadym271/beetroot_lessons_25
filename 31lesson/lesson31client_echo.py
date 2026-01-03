@@ -26,6 +26,6 @@ if __name__ == "__main__":
         payload = json.dumps(data).encode()
         s.sendall(payload)
         data = s.recv(1024)
-        data = ceasar_cypher(data.decode(), n)
+        data = ceasar_cypher(data.decode(), - n)
 
     print(f"Received {data}")
